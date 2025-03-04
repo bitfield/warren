@@ -53,11 +53,7 @@ pub fn get_report(stock: &str) -> Result<Report> {
         .context("bad data")?;
     let range = high - low;
     let position = (price - low) / range * 100.0;
-    let recommendation = match position {
-        0.0..50.0 => "Buy".to_string(),
-        50.0..100.0 => "Don't buy".to_string(),
-        p => unreachable!("bad percentage {p}"),
-    };
+    let recommendation = recommend(position);
     Ok(Report {
         symbol: stock.to_owned(),
         price,
@@ -68,10 +64,20 @@ pub fn get_report(stock: &str) -> Result<Report> {
     })
 }
 
+fn recommend(position: f64) -> String {
+    match position {
+        0.0..50.0 => "Buy".to_string(),
+        50.0..100.0 => "Don't buy".to_string(),
+        p => unreachable!("bad percentage {p}"),
+    }
+}
+
 #[cfg(test)]
-mod tests {    
+mod tests {   
+   use super::*;
+   
     #[test]
-    fn analyse_correctly_interprets_stock_data() {
-        todo!()
+    fn recommend_returns_correct_recommendation_for_given_position() {
+        assert_eq!(recommend(45.0), "Buy");
     }
 }
