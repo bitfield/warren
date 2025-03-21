@@ -7,7 +7,7 @@ use warren::get_report;
 /// Checks the recent price history for a given stock symbol and reports whether it's a good buy.
 struct Args {
     /// Stock or fund symbol
-    stock: String
+    stock: String,
 }
 
 fn main() -> Result<()> {
