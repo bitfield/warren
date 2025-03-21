@@ -1,7 +1,19 @@
 [package]
 name = "warren"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
+authors = ["John Arundel <john@bitfieldconsulting.com>"]
+description = """
+A tool for value investors.
+"""
+keywords = ["cli", "finance", "investment", "stocks", "trading"]
+categories = ["command-line-utilities"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+documentation = "https://docs.rs/warren"
+homepage = "https://github.com/bitfield/warren"
+repository = "https://github.com/bitfield/warren"
+exclude = ["/.github/"]
 
 [dependencies]
 anyhow = "1.0.97"

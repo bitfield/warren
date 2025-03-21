@@ -9,6 +9,7 @@
 A tool for value investors to analyse stock prices and determine if a given stock is currently “cheap”—that is, if its current price is below the median of its 90-day price history.
 
 ![](warren.jpg)
+
 (Photo by [Fortune Live Media](https://www.flickr.com/photos/fortunelivemedia/10311228024), licensed under Creative Commons)
 
 # Installation
