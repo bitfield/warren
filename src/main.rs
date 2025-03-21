@@ -1,7 +1,7 @@
 use anyhow::Result;
 use clap::Parser;
 
-use buffett::get_report;
+use warren::get_report;
 
 #[derive(Parser)]
 /// Checks the recent price history for a given stock symbol and reports whether it's a good buy.
