@@ -1,6 +1,7 @@
 use warren::get_report;
 
 #[test]
+#[ignore = "calls real API"]
 fn get_report_fn_returns_plausible_data() {
     let rep = get_report("AAPL").unwrap();
     assert_eq!(rep.symbol, "AAPL", "wrong symbol");
