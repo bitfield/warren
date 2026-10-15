@@ -15,7 +15,7 @@ A tool for value investors to analyse stock prices and determine if a given stoc
 # Installation
 
 ```sh
-cargo install warren
+cargo install --locked warren
 ```
 
 # Usage
